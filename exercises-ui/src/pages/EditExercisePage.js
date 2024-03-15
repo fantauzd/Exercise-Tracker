@@ -31,34 +31,51 @@ export const EditExercisePage = ({exerciseToEdit}) => {
     return (
         <div>
             <h1>Edit Movie</h1>
-            <input
-                type="text"
-                value={name}
-                onChange={e => setName(e.target.value)} />
-            <input
-                type="number"
-                value={reps}
-                onChange={e => setReps(e.target.value)} />
-            <input
-                type="number"
-                value={weight}
-                onChange={e => setWeight(e.target.value)} />
-            <label htmlFor="units">Choose a unit:</label>
-            <select
-                id="units" 
-                name="units"
-                value={unit}
-                onChange={e => setUnit.target.value}>
-                <option value="kgs">kgs</option>
-                <option value="lbs">lbs</option>
-            </select>
-            <label htmlFor="date">Use MM-DD-YY format:</label>
-            <input
-                id="date"
-                name="date"
-                type="test"
-                value={date}
-                onChange={e => setDate(e.target.value)} />
+            <div>
+                <label htmlFor="name">Enter Name:</label>
+                <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    value={name}
+                    onChange={e => setName(e.target.value)} />
+            </div>
+            <div>
+                <label htmlFor="reps">Enter Reps:</label>
+                <input
+                    id="reps"
+                    name="reps"
+                    type="number"
+                    value={reps}
+                    onChange={e => setReps(e.target.value)} />
+            </div>
+            <div>
+                <label htmlFor="weight">Enter Weight:</label>
+                <input
+                    id="weight"
+                    name="weight"
+                    type="number"
+                    value={weight}
+                    onChange={e => setWeight(e.target.value)} />
+            </div>
+            <div>
+                <label htmlFor="units">Enter Unit:</label>
+                <input
+                    id="unit"
+                    name="unit"
+                    type="text"
+                    value={unit}
+                    onChange={e => setUnit(e.target.value)} />
+            </div>
+            <div>
+                <label htmlFor="date">Enter Date (MM-DD-YY):</label>
+                <input
+                    id="date"
+                    name="date"
+                    type="text"
+                    value={date}
+                    onChange={e => setDate(e.target.value)} />
+            </div>
             <button
                 onClick={editExercise}
             >Save</button>
