@@ -1,6 +1,6 @@
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #41b3a492;
+  background-color: #41b3a4c8;
   color: #C38D9E;
   margin: 5px;
   padding: 0%;
@@ -18,29 +18,38 @@ body {
   justify-content: center;
   font-size: calc(12px + 2vmin);
   color: #111;
-  font-family: 'Helvetica Neue', sans-serif; 
   letter-spacing: -1px; 
   line-height: 1;
-  font-weight: bold;
+}
+
+h2 {
+  color: white;
+  font-weight: 900;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #C38D9E;
 }
 
 td, th {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 6px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2;}
+tr:nth-child(even){background-color: #f7e3d5;}
 
-tr:hover {background-color: #ddd;}
+tr:nth-child(odd){background-color: rgba(255, 255, 255, 0.761);}
+
+tr:hover {
+  background-color: #ec8fae;
+  line-height: 40pt;
+}
 
 th {
+  padding: 15px;
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
-  background-color: #04AA6D;
+  text-align: center;
+  background-color: #C38D9E;
   color: white;
 }
