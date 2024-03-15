@@ -1,5 +1,9 @@
 body {
-  background-color: rgb(255,255,255);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #41b3a492;
+  color: #C38D9E;
+  margin: 5px;
+  padding: 0%;
 }
 
 .App {
@@ -7,13 +11,17 @@ body {
 }
 
 .App-header {
-  min-height: 100vh;
+  min-height: 150vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
+  font-size: calc(12px + 2vmin);
+  color: #111;
+  font-family: 'Helvetica Neue', sans-serif; 
+  letter-spacing: -1px; 
+  line-height: 1;
+  font-weight: bold;
 }
 
 .App-link {
