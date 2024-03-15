@@ -63,7 +63,7 @@ export const AddExercisePage = () => {
                     onChange={e => setWeight(e.target.value)} />
             </div>
             <div>
-                <label htmlFor="units">Enter Unit (kgs/lbs):</label>
+                <label htmlFor="unit">Enter Unit (kgs/lbs):</label>
                 <input
                     id="unit"
                     name="unit"

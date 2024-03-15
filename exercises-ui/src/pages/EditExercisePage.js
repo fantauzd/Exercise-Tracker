@@ -59,7 +59,7 @@ export const EditExercisePage = ({exerciseToEdit}) => {
                     onChange={e => setWeight(e.target.value)} />
             </div>
             <div>
-                <label htmlFor="units">Enter Unit:</label>
+                <label htmlFor="unit">Enter Unit:</label>
                 <input
                     id="unit"
                     name="unit"
