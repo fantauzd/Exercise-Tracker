@@ -67,4 +67,4 @@ export const AddExercisePage = () => {
     );
 }
 
-export default AddMoviePage;
+export default AddExercisePage;
