@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import ExerciseList from '../components/ExerciseList';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import situps from "../situps.svg"
 
 function HomePage({setExerciseToEdit}) {
 
@@ -37,6 +38,7 @@ function HomePage({setExerciseToEdit}) {
 
     return (
         <>
+            <img src={situps} alt="" />
             <h2>List of Exercises</h2>
             <Link id="addLink" to="/add-exercise">Add an exercise</Link>
             <ExerciseList exercises={exercises} onDelete = {onDelete} onEdit = {onEdit} ></ExerciseList>
