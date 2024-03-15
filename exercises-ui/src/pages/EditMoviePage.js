@@ -1,27 +1,29 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export const EditMoviePage = ({movieToEdit}) => {
+export const EditExercisePage = ({exerciseToEdit}) => {
 
-    const [title, setTitle] = useState(movieToEdit.title);
-    const [year, setYear] = useState(movieToEdit.year);
-    const [language, setLanguage] = useState(movieToEdit.language);
+    const [name, setName] = useState(exerciseToEdit.name);
+    const [reps, setReps] = useState(exerciseToEdit.reps);
+    const [weight, setWeight] = useState(exerciseToEdit.weight);
+    const [unit, setUnit] = useState(exerciseToEdit.unit);
+    const [date, setDate] = useState(exerciseToEdit.date);
 
     const navigate = useNavigate();
 
-    const editMovie = async () => {
-        const response = await fetch(`/movies/${movieToEdit._id}`, {
+    const editExercise = async () => {
+        const response = await fetch(`/exercises/${exerciseToEdit._id}`, {
             method: 'PUT',
-            body: JSON.stringify({title: title, year: year, language: language}),
+            body: JSON.stringify({name: name, reps: reps, weight: weight, unit: unit, date: date}),
             headers: {
                 'Content-Type': 'application/JSON'
             },
         });
         if(response.status === 200) {
-            alert('Movie has been updated!');
+            alert('Exercise has been updated!');
         } else {
-            alert('Failed to edit movie.');
-            console.log(`Failed to edit movie, status code = ${response.status}`);
+            alert('Failed to edit exercise.');
+            console.log(`Failed to edit exercise, status code = ${response.status}`);
         }
         navigate("/");
     };
@@ -31,21 +33,37 @@ export const EditMoviePage = ({movieToEdit}) => {
             <h1>Edit Movie</h1>
             <input
                 type="text"
-                value={title}
-                onChange={e => setTitle(e.target.value)} />
+                value={name}
+                onChange={e => setName(e.target.value)} />
             <input
                 type="number"
-                value={year}
-                onChange={e => setYear(e.target.value)} />
+                value={reps}
+                onChange={e => setReps(e.target.value)} />
             <input
-                type="text"
-                value={language}
-                onChange={e => setLanguage(e.target.value)} />
+                type="number"
+                value={weight}
+                onChange={e => setWeight(e.target.value)} />
+            <label for="units">Choose a unit:</label>
+            <select
+                id="units" 
+                name="units"
+                value={unit}
+                onChange={e => setUnit.target.value}>
+                <option value="kgs">kgs</option>
+                <option value="lbs">lbs</option>
+            </select>
+            <label for="date">Use MM-DD-YY format:</label>
+            <input
+                id="date"
+                name="date"
+                type="test"
+                value={date}
+                onChange={e => setDate(e.target.value)} />
             <button
-                onClick={editMovie}
+                onClick={editExercise}
             >Save</button>
         </div>
     );
 }
 
-export default EditMoviePage;
+export default EditExercisePage;
