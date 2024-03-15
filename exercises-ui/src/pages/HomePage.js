@@ -1,45 +1,45 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import MovieList from '../components/MovieList';
+import ExerciseList from '../components/ExerciseList';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function HomePage({setMovieToEdit}) {
+function HomePage({setExerciseToEdit}) {
 
-    const [movies, setMovies] = useState([]);
+    const [exercises, setExercises] = useState([]);
 
     const navigate = useNavigate();
 
     const onDelete = async _id => {
-        const response = await fetch(`/movies/${_id}`, {method: 'DELETE'});
+        const response = await fetch(`/exercises/${_id}`, {method: 'DELETE'});
         if(response.status === 204) {
-            setMovies(movies.filter(movie => movie._id !== _id));
+            setExercises(exercises.filter(exercise => exercise._id !== _id));
         } else {
-            console.error(`Failed to delete movie with _id = ${_id}, 
+            console.error(`Failed to delete exercise with _id = ${_id}, 
             status code = ${response.status}`);
         }
     };
 
-    const onEdit = movie => {
-        setMovieToEdit(movie)
-        navigate("/edit-movie");
+    const onEdit = exercise => {
+        setExerciseToEdit(exercise)
+        navigate("/edit-exercise");
     };
 
-    const loadMovies = async movie => {
-        const response = await fetch('/movies');
-        const movies = await response.json();
-        setMovies(movies);
+    const loadExercises = async exercise => {
+        const response = await fetch('/exercises');
+        const exercises = await response.json();
+        setExercises(exercises);
     }
 
     useEffect(() => {
-        loadMovies();
+        loadExercises();
     }, [])
 
     return (
         <>
-            <h2>List of Movies</h2>
-            <MovieList movies={movies} onDelete = {onDelete} onEdit = {onEdit} ></MovieList>
-            <Link to="/add-movie">Add a movie</Link>
+            <h2>List of Exercises</h2>
+            <ExerciseList exercises={exercises} onDelete = {onDelete} onEdit = {onEdit} ></ExerciseList>
+            <Link to="/add-exercise">Add an exercise</Link>
         </>
     );
 }
