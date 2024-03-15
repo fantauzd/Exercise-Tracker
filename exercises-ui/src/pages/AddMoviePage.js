@@ -34,21 +34,34 @@ export const AddExercisePage = () => {
             <h1>Add Exercise</h1>
             <input
                 type="text"
-                placeholder="Enter name here"
                 value={name}
                 onChange={e => setName(e.target.value)} />
             <input
                 type="number"
-                value={year}
-                placeholder="Enter year here"
-                onChange={e => setYear(e.target.value)} />
+                value={reps}
+                onChange={e => setReps(e.target.value)} />
             <input
-                type="text"
-                placeholder="Enter language here"
-                value={language}
-                onChange={e => setLanguage(e.target.value)} />
+                type="number"
+                value={weight}
+                onChange={e => setWeight(e.target.value)} />
+            <label for="units">Choose a unit:</label>
+            <select
+                id="units" 
+                name="units"
+                value={unit}
+                onChange={e => setUnit.target.value}>
+                <option value="kgs">kgs</option>
+                <option value="lbs">lbs</option>
+            </select>
+            <label for="date">Use MM-DD-YY format:</label>
+            <input
+                id="date"
+                name="date"
+                type="test"
+                value={date}
+                onChange={e => setDate(e.target.value)} />
             <button
-                onClick={addMovie}
+                onClick={addExercise}
             >Add</button>
         </div>
     );
