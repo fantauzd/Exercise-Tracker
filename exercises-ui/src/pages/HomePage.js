@@ -40,7 +40,6 @@ function HomePage({setExerciseToEdit}) {
 
     return (
         <>
-            <h1>Exercise Tracker</h1>
             <div>
                 <Link to="/add-exercise">
                     <p id="clickMe">Click on me to add an exercise</p>

@@ -12,6 +12,10 @@ function App() {
 
   return (
     <div className="App">
+      <header>
+        <h1>Exercise Tracker</h1>
+        <p>Use this app to track your exercises and view past workouts!</p>
+      </header>
       <Router>
         <div className="App-header">
 		<Routes>
@@ -21,6 +25,9 @@ function App() {
 		  </Routes>
           </div>
       </Router>
+      <footer>
+        <p>© 2024 Dominic Fantauzzo</p>
+      </footer>
     </div>
   );
 }
