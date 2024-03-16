@@ -1,6 +1,6 @@
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #41b3a4c8;
+  background-color: #70e1d2d3;
   color: #C38D9E;
   margin: 5px;
   padding: 0%;
@@ -23,7 +23,7 @@ body {
 }
 
 h2 {
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: 900;
 }
 
@@ -52,4 +52,33 @@ th {
   text-align: center;
   background-color: #C38D9E;
   color: white;
+}
+
+#bubble {
+
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  top: -160px;
+  right: -75px;
+}
+
+#situps {
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  top: -500px;
+}
+
+#clickMe {
+  font-size: 1.1em;
+  font-weight: bold;
+  position: relative;
+  top: 230px;
+  left: 75px;
+}
+
+#list {
+  position: relative;
+  top: -650px;
 }

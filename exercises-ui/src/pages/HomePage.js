@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import ExerciseList from '../components/ExerciseList';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import situps from "../situps.svg"
+import situps from "../situps.svg";
+import textBubble from "../text-bubble.svg";
 
 function HomePage({setExerciseToEdit}) {
 
@@ -30,19 +31,32 @@ function HomePage({setExerciseToEdit}) {
         const response = await fetch('/exercises');
         const exercises = await response.json();
         setExercises(exercises);
-    }
+    };
 
     useEffect(() => {
         loadExercises();
-    }, [])
+    }, []);
+
 
     return (
         <>
-            <img src={situps} alt="" />
-            <h2>List of Exercises</h2>
-            <Link id="addLink" to="/add-exercise">Add an exercise</Link>
-            <ExerciseList exercises={exercises} onDelete = {onDelete} onEdit = {onEdit} ></ExerciseList>
-            <Link id="addLink" to="/add-exercise">Add an exercise</Link>
+            <h1>Exercise Tracker</h1>
+            <div>
+                <Link to="/add-exercise">
+                    <p id="clickMe">Click on me to add an exercise</p>
+                    <div id="bubble">
+                        <img src={textBubble} alt="" />
+                    </div>
+                    <div id="situps">
+                        <img src={situps} alt="" />
+                    </div>
+                </Link>
+            </div>
+            <div id="list">
+                <h2>List of Exercises</h2>
+                <ExerciseList exercises={exercises} onDelete = {onDelete} onEdit = {onEdit} ></ExerciseList>
+                <Link id="addLink" to="/add-exercise">Add a new exercise</Link>
+            </div>
         </>
     );
 }
