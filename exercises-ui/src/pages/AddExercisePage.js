@@ -64,13 +64,15 @@ export const AddExercisePage = () => {
             </div>
             <div>
                 <label htmlFor="unit">Enter Unit (kgs/lbs):</label>
-                <input
+                <select
                     id="unit"
                     name="unit"
-                    type="text"
-                    placeholder="Enter kgs/lbs here"
-                    value={unit}
-                    onChange={e => setUnit(e.target.value)} />
+                    value=""
+                    onChange={e => setUnit(e.target.value)} >
+                        <option value="">--Choose Unit--</option>
+                        <option value="kgs">kgs</option>
+                        <option value="lbs">lbs</option>
+                </select>
             </div>
             <div>
                 <label htmlFor="date">Enter Date (MM-DD-YY):</label>

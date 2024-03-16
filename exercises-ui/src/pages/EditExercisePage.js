@@ -60,12 +60,14 @@ export const EditExercisePage = ({exerciseToEdit}) => {
             </div>
             <div>
                 <label htmlFor="unit">Enter Unit:</label>
-                <input
+                <select
                     id="unit"
                     name="unit"
-                    type="text"
                     value={unit}
-                    onChange={e => setUnit(e.target.value)} />
+                    onChange={e => setUnit(e.target.value)} >
+                        <option value="kgs">kgs</option>
+                        <option value="lbs">lbs</option>
+                </select>
             </div>
             <div>
                 <label htmlFor="date">Enter Date (MM-DD-YY):</label>
