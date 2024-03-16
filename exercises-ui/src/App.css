@@ -31,7 +31,7 @@ h2 {
   color: #C38D9E;
 }
 
-td, th {
+tr td, th {
   border: 1px solid #ddd;
   padding: 6px;
 }
@@ -45,7 +45,11 @@ tr:hover {
   line-height: 40pt;
 }
 
-th {
+tr td:hover {
+  background-color: #e45383;
+}
+
+tr th {
   padding: 15px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -54,8 +58,15 @@ th {
   color: white;
 }
 
-#bubble {
+input {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
+button {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#bubble {
   padding: 0px;
   margin: 0px;
   position: relative;
