@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import kettle from "../kettle.svg";
 
 export const EditExercisePage = ({exerciseToEdit}) => {
 
@@ -30,7 +31,10 @@ export const EditExercisePage = ({exerciseToEdit}) => {
 
     return (
         <div>
-            <h1>Edit Movie</h1>
+            <div id="kettle">
+                <img src={kettle} alt="" />
+            </div>
+            <h1>Edit Exercise</h1>
             <div>
                 <label htmlFor="name">Enter Name:</label>
                 <input

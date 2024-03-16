@@ -1,6 +1,6 @@
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #70e1d2d3;
+  background-color: #3feee6;
   color: #000000;
   font-size: 15pt;
   margin: 5px;
@@ -12,7 +12,6 @@ body {
 }
 
 .App-header {
-  min-height: 150vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,17 +42,17 @@ tr td, th {
   padding: 6px;
 }
 
-tr:nth-child(even){background-color: #f7e3d5;}
+tr:nth-child(even){background-color: #cafafe;}
 
-tr:nth-child(odd){background-color: rgba(255, 255, 255, 0.761);}
+tr:nth-child(odd){background-color: #97caef;}
 
 tr:hover {
-  background-color: #ec8fae;
+  background-color: #f47d7d;
   line-height: 40pt;
 }
 
 tr td:hover {
-  background-color: #e45383;
+  background-color: #fc4445;
 }
 
 tr th {
@@ -61,7 +60,7 @@ tr th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  background-color: #C38D9E;
+  background-color: #fc4445;
   color: white;
 }
 
@@ -73,20 +72,7 @@ button {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-#bubble {
-  padding: 0px;
-  margin: 0px;
-  position: relative;
-  top: -160px;
-  right: -75px;
-}
 
-#situps {
-  padding: 0px;
-  margin: 0px;
-  position: relative;
-  top: -500px;
-}
 
 #clickMe {
   font-size: 1.1em;
@@ -98,10 +84,21 @@ button {
 
 #list {
   position: relative;
-  top: -650px;
+  top: -80px;
 }
 
-footer {
-  position: relative;
-  top: -600px;
+
+.App-nav a {
+  padding: 0px 20px 5px 20px;
+  background-color:#fc4445;
+  text-decoration:none;
+  color:#000000;
+  border-right: 2px solid #ffffff;
+  font-weight:bold;
+  border-radius:3px;
+}
+
+.kettle {
+  margin-top: 100px;
+  padding-top: 200px;
 }

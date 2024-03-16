@@ -5,6 +5,8 @@ import HomePage from './pages/HomePage';
 import AddExercisePage from './pages/AddExercisePage';
 import EditExercisePage from './pages/EditExercisePage';
 import { useState } from 'react';
+import Navigation from './components/Navigation';
+
 
 function App() {
 
@@ -18,16 +20,17 @@ function App() {
       </header>
       <Router>
         <div className="App-header">
-		<Routes>
-          <Route path="/" element={<HomePage setExerciseToEdit={setExerciseToEdit} />}/>
-          <Route path="/add-exercise" element={<AddExercisePage />}/>
-          <Route path="/edit-exercise" element={ <EditExercisePage exerciseToEdit={exerciseToEdit} />}/>
-		  </Routes>
-          </div>
+          <Navigation />
+		      <Routes>
+            <Route path="/" element={<HomePage setExerciseToEdit={setExerciseToEdit} />}/>
+            <Route path="/add-exercise" element={<AddExercisePage />}/>
+            <Route path="/edit-exercise" element={ <EditExercisePage exerciseToEdit={exerciseToEdit} />}/>
+		      </Routes>
+        </div>
       </Router>
-      <footer>
-        <p>© 2024 Dominic Fantauzzo</p>
-      </footer>
+        <footer>
+          <p>© 2024 Dominic Fantauzzo</p>
+        </footer>
     </div>
   );
 }

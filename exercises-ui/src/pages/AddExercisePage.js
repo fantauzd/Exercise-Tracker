@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import bench from "../bench.svg";
 
 export const AddExercisePage = () => {
 
@@ -31,6 +32,9 @@ export const AddExercisePage = () => {
 
     return (
         <div>
+            <div id="bench">
+                <img src={bench} alt="" />
+            </div>
             <h1>Add Exercise</h1>
             <div>
                 <label htmlFor="name">Enter Name:</label>

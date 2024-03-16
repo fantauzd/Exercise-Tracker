@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import ExerciseList from '../components/ExerciseList';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import situps from "../situps.svg";
-import textBubble from "../text-bubble.svg";
+import barbell from "../barbell.svg";
 
 function HomePage({setExerciseToEdit}) {
 
@@ -40,17 +39,9 @@ function HomePage({setExerciseToEdit}) {
 
     return (
         <>
-            <div>
-                <Link to="/add-exercise">
-                    <p id="clickMe">Click on me to add an exercise</p>
-                    <div id="bubble">
-                        <img src={textBubble} alt="" />
-                    </div>
-                    <div id="situps">
-                        <img src={situps} alt="" />
-                    </div>
-                </Link>
-            </div>
+            <Link to="/add-exercise">
+                <img src={barbell} alt="" />
+            </Link>
             <div id="list">
                 <h2>List of Exercises</h2>
                 <ExerciseList exercises={exercises} onDelete = {onDelete} onEdit = {onEdit} ></ExerciseList>
