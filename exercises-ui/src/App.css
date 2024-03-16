@@ -31,6 +31,8 @@ h1{
   font-size: 55pt;
   color: rgb(0, 0, 0);
   font-weight: 900;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .App-link {
@@ -98,7 +100,20 @@ button {
   border-radius:3px;
 }
 
+.App-nav a:hover {
+  background-color: #97caef;
+}
+
 .kettle {
   margin-top: 100px;
   padding-top: 200px;
+}
+
+header {
+  background-color: #97caef;
+  margin-bottom: 60px;
+}
+
+footer {
+  background-color: #97caef;
 }
